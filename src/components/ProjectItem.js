@@ -6,7 +6,7 @@ function ProjectItem({ name, about, technologies }) {
       <h3>{name}</h3>
       <p>{about}</p>
       <div className="technologies">
-        {technologies.map((technology, index) => (
+        {Array.isArray(technologies) && technologies.map((technology, index) => (
           <span key={index}>{technology}</span>
         ))}
       </div>
